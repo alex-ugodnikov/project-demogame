@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merienda+One">
+
+
+</head>
+
+<body>
+
+    <div id="container">
+
+        <div id="header">
+            <p>Play the greatest RPG game built at Ironhack</p>
+        </div>
+
+        <div id="interface">
+            <h2>Choose Your Character:</h2>
+            <a href="#" onclick="gameObject.setGameStart('Warrior')">
+                <div>
+                    <img src="" alt="">
+                    <h3>Warrior</h3>
+                    <p>Warrior features text</p>
+                </div>
+            </a>
+            <a href="#" onclick="gameObject.setGameStart('Rogue')">
+                <div>
+
+                    <img src="" alt="">
+                    <h3>Rogue</h3>
+                    <p>Rogue features text</p>
+                </div>
+            </a>
+            <a href="#" onclick="gameObject.setGameStart('Hunter')">
+                <div>
+                    <img src="" alt="">
+                    <h3>Hunter</h3>
+                    <p>Hunter features text</p>
+                </div>
+            </a>
+            <a href="#" onclick="gameObject.setGameStart('Mage')">
+                <div>
+                    <img src="" alt="">
+                    <h3>Mage</h3>
+                    <p>Mage features text</p>
+                </div>
+            </a>
+
+
+        </div>
+
+
+        <div id="actions"></div>
+
+        <div id="arena">
+            <h2>Arena</h2>
+        </div>
+
+        <div id="enemy"></div>
+    </div>
+    <script src="js/game.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/enemy.js"></script>
+</body>
+
+</html>
