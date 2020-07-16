@@ -11,8 +11,8 @@ let gameObject = {
             case "Rogue":
                 player = new Player('Rogue', 16, 80, 0, 40, 10);
                 break;
-            case "Mage":
-                player = new Player('Mage', 10, 60, 50, 18, 10);
+            case "Wizard":
+                player = new Player('Wizard', 10, 60, 50, 18, 10);
                 break;
             case "Hunter":
                 player = new Player('Hunter', 16, 80, 0, 40, 10);
@@ -22,8 +22,8 @@ let gameObject = {
                 break;
         }
         let getInterface = document.getElementById('interface');
-        getInterface.innerHTML = `<div>
-        <img src="" alt="">
+        getInterface.innerHTML = `<div class="player-stats">
+        <img src="./images/${player.classType.toLowerCase()}.png" alt="">
         <h3>${player.classType}</h3>
         <p>Strength: ${player.strength}</p> 
         <p id="player-health">Health: ${player.health}</p> 
@@ -49,8 +49,8 @@ let gameObject = {
         enemy = new Enemy('Goblin', 20, 100, 0, 10, 5);
         getHeader.innerHTML = '<p>Objective: Choose your Action</p>';
         getActions.innerHTML = `<button class='prefight-btn' onclick='PlayerMoves.calcAttack()'>Attack!</button>`;
-        getEnemy.innerHTML = `<div>
-        <img src="" alt="">
+        getEnemy.innerHTML = `<div class="player-stats">
+        <img src="./images/${enemy.name.toLowerCase()}.png" alt="">
         <h3>${enemy.name}</h3>
         <p>Strength: ${enemy.strength}</p> 
         <p id="enemy-health">Health: ${enemy.health}</p> 

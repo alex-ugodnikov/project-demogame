@@ -18,7 +18,7 @@ let PlayerMoves = {
     let getPlayerHealth = document.getElementById('player-health');
     let getEnemyHealth = document.getElementById('enemy-health');
 
-    function playerAttack () {
+    function playerAttack() {
       let calcBaseDamage = Math.ceil(player.strength * player.agility / 30);
       let calcOutputDamage = Math.floor(Math.random() * 5) + calcBaseDamage;
       let numberOfHits = Math.ceil(Math.random() * player.agility / 10);
@@ -26,7 +26,7 @@ let PlayerMoves = {
       return attackValues;
     }
 
-    function enemyAttack () {
+    function enemyAttack() {
       let calcBaseDamage = Math.ceil(enemy.strength * enemy.agility / 30);
       let calcOutputDamage = Math.floor(Math.random() * 5) + calcBaseDamage;
       let numberOfHits = Math.ceil(Math.random() * enemy.agility / 10);
@@ -41,6 +41,8 @@ let PlayerMoves = {
       alert('You hit ' + playerAttackValues[0] + ' damage ' + playerAttackValues[1] + ' time(s)');
       if (enemy.health <= 0) {
         getEnemyHealth.innerHTML = 'Health: 0';
+        document.getElementById('actions').innerHTML = '<br>';
+        document.getElementById('header').innerHTML = '<p>You won! Refresh the browser to start again</p>';
         alert('You won! Refresh the browser to start again');
       } else {
         getEnemyHealth.innerHTML = 'Health: ' + enemy.health;
@@ -51,7 +53,9 @@ let PlayerMoves = {
         alert('Enemy hits ' + enemyAttackValues[0] + ' damage ' + enemyAttackValues[1] + ' time(s)');
         if (player.health <= 0) {
           getPlayerHealth.innerHTML = 'Health: 0';
-          alert('You lost( Refresh the browser to start again');
+          document.getElementById('actions').innerHTML = '<br>';
+          document.getElementById('header').innerHTML = '<p>You lost :( Refresh the browser to start again</p>';
+          alert('You lost :( Refresh the browser to start again');
         } else {
           getPlayerHealth.innerHTML = 'Health: ' + player.health;
         }
